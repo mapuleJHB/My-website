@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" class="u-responsive-xl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>About Me</title>
+    <link id="u-theme-google-font" rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="about.css">
+<!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style class="u-style">.u-section-2 .u-sheet-1 {
+  min-height: 894px;
+}
+.u-section-2 .u-layout-wrap-1 {
+  width: 1140px;
+  margin: 0 auto;
+}
+.u-section-2 .u-layout-cell-1 {
+  min-height: 303px;
+}
+.u-section-2 .u-container-layout-1 {
+  padding: 30px 100px;
+}
+.u-section-2 .u-text-1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.u-section-2 .u-text-2 {
+  font-size: 0.875rem;
+  line-height: 2;
+  margin: 20px 0 0;
+}
+.u-section-2 .u-layout-cell-2 {
+  min-height: 447px;
+}
+.u-section-2 .u-container-layout-2 {
+  padding: 30px;
+}
+.u-section-2 .u-image-1 {
+  width: 365px;
+  height: 387px;
+  object-position: 50% 0%;
+  margin: 0 auto;
+}
+.u-section-2 .u-layout-cell-3 {
+  min-height: 303px;
+}
+.u-section-2 .u-container-layout-3 {
+  padding: 30px 100px;
+}
+.u-section-2 .u-text-3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.u-section-2 .u-text-4 {
+  font-size: 0.875rem;
+  line-height: 2;
+  margin: 20px 0 0;
+}
+@media (max-width: 1199px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 710px;
+  }
+  .u-section-2 .u-layout-wrap-1 {
+    width: 940px;
+  }
+  .u-section-2 .u-layout-cell-1 {
+    min-height: 250px;
+  }
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 369px;
+  }
+  .u-section-2 .u-layout-cell-3 {
+    min-height: 250px;
+  }
+}
+@media (max-width: 991px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 324px;
+  }
+  .u-section-2 .u-layout-wrap-1 {
+    width: 720px;
+  }
+  .u-section-2 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 283px;
+  }
+  .u-section-2 .u-layout-cell-3 {
+    min-height: 100px;
+  }
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 253px;
+  }
+  .u-section-2 .u-layout-wrap-1 {
+    width: 540px;
+  }
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 212px;
+  }
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 174px;
+  }
+  .u-section-2 .u-layout-wrap-1 {
+    width: 340px;
+  }
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 133px;
+  }
+  .u-section-2 .u-image-1 {
+    width: 320px;
+    height: 339px;
+  }
+}</style>
+
+</script>
+
+<script>(function addTranscript() {
+  function debounce(callback, wait, immediate = false) {
+    let timeout = null;
+
+    return function () {
+      const callNow = immediate && !timeout;
+      const next = () => callback.apply(this, arguments);
+
+      clearTimeout(timeout);
+      timeout = setTimeout(next, wait);
+
+      if (callNow) {
+        next();
+      }
+    };
+  }
+
+  function waitFor(selector, callback, timeout) {
+    const element = document.querySelector(selector);
+    if (element) {
+      callback(element);
+    } else {
+      if (timeout) {
+        return window.setTimeout(() => {
+          return window.requestAnimationFrame(() => {
+            waitFor(selector, callback);
+          });
+        }, timeout);
+      }
+      return window.requestAnimationFrame(() => {
+        waitFor(selector, callback);
+      });
+    }
+  }
+
+  function onVideoChange(cb) {
+    const debouncedCallback = debounce(cb, 200);
+    waitFor(
+      "ytd-player",
+      function handlePlayer(player) {
+        const video = document.querySelector(".html5-main-video");
+        if (!video) {
+          setTimeout(() => handlePlayer(player), 1000);
+          return;
+        }
+        debouncedCallback();
+        const observer = new MutationObserver(debouncedCallback);
+        observer.observe(video, {
+          childList: false,
+          subtree: false,
+          attributes: true,
+        });
+      },
+      100
+    );
+  }
+
+  function renderTranscript() {
+    const player = document.querySelector("ytd-player")?.getPlayer();
+    if (!player) {
+      return;
+    }
+
+    const { isLive, video_id } = player.getVideoData();
+    const options = player.getOptions();
+    const hasCaptions = options.includes("captions");
+
+    if (!hasCaptions || isLive) {
+      document.querySelector("#transcript-info")?.remove();
+      return;
+    }
+
+    document.querySelector("#transcript-info")?.remove();
+
+    const wrapper = document.createElement("div");
+    wrapper.id = `transcript-info`;
+    wrapper.style = `
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 8px;
+    `.replace("\n", " ");
+
+    const a = document.createElement("a");
+    a.setAttribute("href", `https://video-insights.com/en/video/${video_id}`);
+    a.setAttribute("target", "_blank");
+    a.setAttribute(
+      "style",
+      `
+        color: var(--yt-spec-call-to-action);
+        background-color: transparent;
+        text-transform: uppercase;
+        border: 1px solid var(--yt-spec-call-to-action);
+        padding: var(--yt-button-padding-minus-border);
+        width: var(--yt-paper-button-width, auto);
+        height: var(--yt-paper-button-height, auto);
+        border-radius: inherit;
+        text-align: center;
+        min-width: var(--yt-paper-button-min-width, var(--ytd-paper-button-min-width, 5.14em));
+        font-size: var(--yt-paper-button-font-size, inherit);
+        transition: var(--shadow-transition_-_transition);
+        margin: var(--yt-button-margin, 0 0.29em);
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-size: var(--ytd-tab-system_-_font-size);
+        font-weight: var(--ytd-tab-system_-_font-weight);
+        letter-spacing: var(--ytd-tab-system_-_letter-spacing);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: var(--yt-paper-button-min-width, var(--ytd-paper-button-min-width, 5.14em));
+        cursor: pointer;
+        -webkit-font-smoothing: var(--paper-font-common-base_-_-webkit-font-smoothing);
+      `.replace(/(\r\n|\n|\r|\s)/gm, "")
+    );
+    a.appendChild(document.createTextNode("Transcript "));
+    wrapper.appendChild(a);
+
+    const root = document.querySelector("ytd-video-owner-renderer");
+    root?.appendChild(wrapper);
+  }
+
+  onVideoChange(renderTranscript);
+})()</script>
+
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+  <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleClass('show');
+      });
+    });
+  </script>
+</head>
+  <body class="u-body">
+    <nav class="navigation-bar">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="resume.html">Resume</a></li>
+      </ul>
+ </nav>
+    
+    <section class="u-clearfix u-section-2" id="carousel_7023">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h5 class="u-text u-text-1">About Me</h5>
+                  <p style="font-family:'Courier New'">
+                  My name is Mmathabo Pule I am a BA languages graduate from the University of Limpopo currently studying
+                  software development at WeThinkCode_, because of the fourth industrial revolution i decided to change my career.This was inspired
+                  mainly by the rapidly growing of the technology and the shortage of women in the tech industry. I am self motivated,goal oriented individual
+                  who is always looking for coding challenges to enhance my skills and knowledge.
+</p>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                <div class="border-radius:50%">
+                  <img src= "media/me.jpg"alt="mmm" class="center"> 
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
+                <div class="u-container-layout u-valign-middle u-container-layout-3">
+                  <h5 class="u-text u-text-3">What I Do</h5>
+                  <p style="font-family:'Courier New'">
+                    I design,implement,manage and test software programs.
+                    
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+</body></html>

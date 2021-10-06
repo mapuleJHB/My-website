@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style:none;
+    background-color: cadetblue;
+  }
+  nav{
+    height: 80px;
+    width: 100%;
+    background:whitesmoke;
+  
+  }
+  .navigation-bar{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 20px 10px;
+    background:cadetblue;
+  }
+  .navigation-bar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .navigation-bar ul li a{
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+  }
